@@ -9,13 +9,11 @@ django
  - django-admin startproject django_crud_api .
  - python manage.py runserver
  - python manage.py migrate 
-___________________________________
 
 <h2>2. Vamos a crear una vista para esto vamos a </h2>
  - python manage.py startapp core -> de esta forma crea toda la información con la que debemos trabajar
  - views.py
  - ahora vamos a la clase url.py y unimos con la funcion que se crea en views.py
-_________________________________________
 
 <h2>3. Vamos a crear los templates en donde vamos a crear los html</h2>
  - Creamos templates a nivel de core
@@ -27,7 +25,6 @@ _________________________________________
  3.1 A pesar que estamos haciendo todo el proceso va a sacar un error esto pasa porque falta core
 	- Vamos a settings.py en webpersonal
 	 - En la parte de INSTALLED_APPS = [ colocamos 'core', ] -> despues de la informacion que hay ahi
-___________________________________
 
 <h2>4. Para que el codigo no sea redudante</h2>
  - en templates > core > creamos base.html
@@ -41,14 +38,12 @@ ___________________________________
 	<p>Me puedes contactar aqui</p>
 
 	{% endblock %}
-___________________________________
 
 <h2>5. Hacer el tempalte tag url de forma dinamica -> buenas practicas</h2>
  - vamos hacer los enlaces relativos
   - base.html
   
 	dentro del href="{% url 'home' %}"
-___________________________________
 
 <h2>6. Uniendo el Frontend con el Backend</h2>
  Esta parte lo que hacemos en modificar base.html con un html que el profesor ya tenia en guardado y se comienzan hacer la modificaciones
@@ -69,7 +64,6 @@ ___________________________________
 	{% endblock %}
 
 <h2>7. En este punto se comienza a maquetar la pagina de internet con su respectivos tag</h2>
-___________________________________
 
 <h2>8. Gestionando Portfolio</h2>
  - hay que esta ubicado en la terminal en webpersonal en donde esta ubicado el setting
@@ -85,7 +79,6 @@ ___________________________________
 	 - python manage.py makemigrations portfolio
    8.1.3 Debemos migrar esta informacion a la base de datos
     - python manage.py migrate portfolio
-___________________________________
 
 <h2>9. El panel de Administrador</h2>
  - Colocamos el programa a correr e ingresamos a 
@@ -121,7 +114,6 @@ ___________________________________
     - en urls.py en webpersonal en la parte donde se encuentra el settings.py
 	 - colocamos el from django.conf import settings para que cargue el fichero settings y cargue las dos variables de media
 	 y colocamos el if setting.DEBUG: -> Que mira si estamos en modo debug entonces ejecutara la imagenes
-___________________________________
 
 <h2>10. El Patron MVT: Modelo - Vista - Template</h2>
  10.1 Vamos a views.py y colocamos el url del portfolio en este lugar
