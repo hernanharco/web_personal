@@ -46,6 +46,7 @@ ___________________________________
 <h2>5. Hacer el tempalte tag url de forma dinamica -> buenas practicas</h2>
  - vamos hacer los enlaces relativos
   - base.html
+  
 	dentro del href="{% url 'home' %}"
 ___________________________________
 
@@ -54,6 +55,7 @@ ___________________________________
  para que funcione con los tag correspondientes y tambien creamos la carpeta static a nivel core para agregar archivos ya creados
  
  6.1 Haciendo que la cabecera sea dinamica
+ 
   - {% block title %} Home {% endblock %}
 
 	{% comment %} para que pueda aparecer la imagen de fondo se debe dejar todo el codigo en una sola linea {% endcomment %}
@@ -61,8 +63,8 @@ ___________________________________
 
 	{% block headers %}
 
-	  <h1>Hernan A. Cortés</h1>
-	  <span class="subheading">Programador Full Stack</span>
+		  <h1>Hernan A. Cortés</h1>
+		  <span class="subheading">Programador Full Stack</span>
 
 	{% endblock %}
 
@@ -89,10 +91,12 @@ ___________________________________
  - Colocamos el programa a correr e ingresamos a 
   /admin -> va a pedir el usuario y contraseña
    1. python manage.py createsuperuser
+   
     Username: xxxxxx
 	email address: xxxxxx
 	password: xxxxxx
 	password (again): xxxxxx
+ 
    2. Vamos a admin.py -> esto es para registrarlo para que se pueda ver en /admin
    
    9.1 Personalizando el Administrador
